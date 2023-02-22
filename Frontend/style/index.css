@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding: 0% 1%;
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.428571429;
+    background: #fff;
+    color: #222;
+    font-family: var(--webfont-primary, sans-serif);
+}
+nav{
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+}
+
+#black{
+    background-color: black;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid white;
+}
+#nav1{
+    display: flex;
+    justify-content: space-between;
+    height:15%;
+    
+}
+#nav1 #links{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    gap: 20px;
+    font-weight: bold;
+   
+    margin-left: 10%;
+   
+}
+#nav1 div>a>button{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+   font-weight: bold;
+}
+#logo{
+    height: 60px;
+    
+
+    
+}
+#logo img{
+    width: 150%;
+    height: 100%;
+    
+}
+#links2{
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+    gap: 20px;
+}
+img{
+    width: 100%;
+}
+#maindiv{
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-weight: bold;
+    z-index: 1.0;
+
+    
+}
+#maindiv button{
+    background-color: red;
+    /* padding: 10px 20px 10px 20px; */
+    padding: 10px 60px ;
+    color: white;
+    border: none;
+
+}
+#slideshow {
+    width: 60%;
+    margin: auto;
+}
+
+#slideshow img {
+    width: 100%;
+
+}
+#laptop{
+    display: flex;
+    justify-content: space-between;
+}
+#laptop2{
+   
+    font-weight: bold;
+    width: 45%;
+    padding-left: 20px;
+}
+#laptop2>div{
+    margin-top: 30%;
+    font-size: 30px;
+}
+#mid1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+#google{
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    
+}
+#google >div img{
+    width: 70%;
+}
+
+#google img{
+    width: 100%;
+}
+#playstore{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+#play2{
+    margin-top: 10%;
+    margin-right: 15%;
+}
+#last{
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    margin: 10%;
+    font-size: 20px;
+}
+#last button{
+    background-color: red;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 7px 50px;
+}
+#foot1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+#foot1>div p{
+    color: gray;
+
+}
+#foot2{
+    display: flex;
+    height: 7%;
+    justify-content: space-between;
+}
+
+#lastlink{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    font-size: 25px;
+}
+#footicon{
+    display: flex;
+    width: 30%;
+    gap: 10px;
+   
+}
+@media (min-width: 100px) and (max-width: 700px){
+    
+    #nav1{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+    #nav1 #links{
+       
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+       
+    }
+    #links2{
+        
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+        
+    }
+    #logo img{
+        width: 100%;
+        height: 100%;
+        
+    }
+    #maindiv{
+        font-size: 30%;
+        color: white;
+        position: absolute;
+        top: 12%;
+        left: 5%;
+        font-weight: bold;
+        z-index: 1.0;
+    
+        
+    }
+    #laptop{
+        flex-direction: column;
+        margin: auto;
+       
+    }
+    #slideshow {
+       
+        margin: auto;
+    }
+    
+    #slideshow img {
+        width: 70%;
+    
+    }
+    #mid1{
+       display: flex;
+       text-align: start;
+       flex-direction: column;
+       margin-top: 50px;
+        margin-bottom: 30px;
+        margin: auto;
+    
+    }
+    #google{
+       
+        flex-direction: column;
+        font-weight: bold;
+        
+    }
+    #harshal{
+        text-align: start;
+        align-items: start;
+    }
+    #last{
+        text-align: start;
+    }
+    #foot1{
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    #foot2{
+        flex-direction: column;
+    }
+    #lastlink{
+        width: 70%;
+        margin: auto;
+        align-items: center;
+        align-content: center;
+        font-size: 25px;
+    }
+    #footicon{
+        flex-direction: column;
+        width: 150%;
+        margin:auto;
+    }
+    #footicon img{
+        width: 50%;
+    }
+   
+    
+
+
