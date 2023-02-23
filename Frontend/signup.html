@@ -57,7 +57,7 @@ cont.style.display = "none";
 
 })
 
-let form=document.querySelector("form")
+let form = document.querySelector("form")
 
 form.addEventListener("submit",(e)=>{
      e.preventDefault()
@@ -69,7 +69,8 @@ form.addEventListener("submit",(e)=>{
         city:form.city.value
        
       }
-        fetch("http://localhost:8080/users/register",{
+      console.log(payload)
+        fetch("https://sore-bear-pocketbook.cyclic.app/users/register",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
@@ -80,9 +81,7 @@ form.addEventListener("submit",(e)=>{
         return res.json()
       }).then((res)=>{
         console.log(res) 
-        window.location.assign("./index.html")
-
-
+        window.location.assign("./login.html")
       }).catch((err)=>{
         console.log(err)
       })
