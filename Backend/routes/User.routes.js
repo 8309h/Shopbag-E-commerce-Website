@@ -110,6 +110,9 @@ userRouter.post("/login",async(req,res)=>{
             })
          }
      } catch (error) {
+
+
+      
         
         res.send({"msg":"something went wrong",error:error.message})
      }
