@@ -7,12 +7,13 @@ body {
     line-height: 1.428571429;
     background: #fff;
     color: #222;
-    font-family: var(--webfont-primary, sans-serif);
+    font-family: var(--webfont-primary,sans-serif);
 }
 nav{
     position: sticky;
     top: 0px;
     background-color: #fff;
+    z-index: 1;
 }
 
 #black{
@@ -49,13 +50,11 @@ nav{
 }
 #logo{
     height: 60px;
-    
-
-    
 }
 #logo img{
     width: 150%;
     height: 100%;
+    
     
 }
 #links2{
@@ -184,6 +183,11 @@ img{
     gap: 10px;
    
 }
+#links2 a{
+    text-decoration: none;
+    color: black;
+    /* background-color: black; */
+}
 @media (min-width: 100px) and (max-width: 700px){
     
     #nav1{
@@ -205,7 +209,10 @@ img{
         justify-content: end;
         flex-wrap: wrap;
         
+
+        
     }
+    
     #logo img{
         width: 100%;
         height: 100%;
@@ -284,3 +291,4 @@ img{
     
 
 
+}
