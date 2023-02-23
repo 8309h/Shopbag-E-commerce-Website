@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema({
-"name":{type:String,require:true},
-"email":{type:String,require:true},
-"pass": {type:String,require:true},
+name:String,
+email:String,
+password: String,
+city: String
 },
 {
     versionKey : false

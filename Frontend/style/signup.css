@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    margin: auto;
+
+}
+input ,button{
+    width: 100%;
+    padding: 12px 10px;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+   
+}
+#logo{
+    width: 70%;
+     margin: auto;
+   
+    
+}
+#logo img{
+    width: 100%;
+   
+}
+#container{
+    display: block;
+    width: 70%;
+    height: 100%;
+    gap: 0px;
+    display: flex;
+    margin: auto;
+   
+    
+   
+}
+#black{
+    width: 50%;
+    background-color: black;
+    color: white;
+    
+   
+}
+#black h1,p,h3{
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+#hide{
+    width: 50px;
+    text-align: center;
+    background-color: white;
+    border: none;
+    margin-left: 80%;
+   
+}
+#white{
+    width: 50%;
+  
+}
+
+form {
+    width:80%;
+    margin: auto;
+    font-size: bolder;
+    margin-top: 10%;
+   
+}
+form p,h3{
+    text-align: left;
+}

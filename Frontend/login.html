@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- <link rel="stylesheet" href="./style/style.css"> -->
+    <link rel="stylesheet" href="style/login.css">
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="black">
+            <div id="logo">
+                <img src="./images/logo2.png" alt="">
+             </div>
+                <h1>We are your <br>Shoping Assistance</h1>
+                <p>WITH US YOU CAN</p>
+                <h3>👜COMPARE WITH 500+ STORE</h3>
+                <h3>⏰GET ALERTS ON YOUR ITEMS</h3>
+                <h3>🔎SAVE YOUR SEARCHES</h3>
+                <h3>🛒MANAGE YOUR SHOPING LIST</h3>
+                <h3>🤑EARN POINTS</h3>
+        </div>
+        <div id="white">
+            <button id="hide" style="text-align: end; font-size:25px;">X</button>
+            <form>
+                 <h1>Log in to your account</h1><br>
+                
+                <label>E-mail</label><br>
+                <input id="email" type="email" placeholder="Enter your email"><br>
+                <label for="pwd">Password</label><br>
+                <input type="password" id="password" name="pwd" minlength="4" placeholder="Enter password">
+                <!-- <button onclick="onLogin()">Login</button> -->
+                <input type="submit" value="submit">
+                <h3> Do not have an account? <a style="text-decoration:none; color: black;" href="signup.html">Sign-up</a></h3>
+            </form>
+        </div>
+        
+    </div>
+</body>
+
+</html>
+<script>
+    const onLogin = () => {
+        const payload = {
+            email: document.getElementById("email").value,
+            pass: document.getElementById("pass").value
+
+        }
+        fetch("http://localhost:7080/users/login", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        }).then(res => res.json())
+            .then(res => {
+                console.log(res)
+                localStorage.setItem("token",res.token)
+                window.location.assign("./index.html");
+            })
+            .catch(err => console.log(err))
+
+    }
+    document.getElementById("hide").addEventListener("click",function() {
+
+     let cont = document.getElementById("container")
+     cont.style.display = "none";
+
+        
+})
+    
+
+</script>
