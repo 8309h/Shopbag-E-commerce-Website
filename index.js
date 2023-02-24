@@ -34,8 +34,9 @@ app.get("/usersdata",async(req,res) => {
     
 })
 app.use("/users",userRouter)
-app.use(authonticate)
 app.use("/products",productRouter)
+app.use(authonticate)
+
 
 
 

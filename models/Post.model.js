@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
 
 const productSchema = mongoose.Schema({
-    image: String,
-title:String,
-discription:String,
-brand:String,
-price: String,
+    Title: String,
+    Catogory: String,
+    Image: String,
+    Description: String,
+    Price: Number
+
 },
 {
     versionKey : false
