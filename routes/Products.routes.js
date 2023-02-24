@@ -4,17 +4,28 @@ const {ProductModel} = require("../models/Post.model")
 const productRouter = express.Router()
 
 productRouter.get("/", async (req,res) => {
-    let query = res.query
+    try{
+       const products = await ProductModel.find()
+       res.send(products)
 
-    const products = await ProductModel.find(query)
-    res.send(products)
+    }catch(err){
+        res.send({"msg":"Coanot get products"})
+    }
+    
+
+    
 })
 productRouter.post("/create", async (req,res) => {
     const payload = req.body
-    const note  = new ProductModel(payload)
-     await note.save()
-     res.send("product Created")
+    try{
+        const prdt  = new ProductModel(payload)
+     await prdt.save()
+     res.send({"msg":"product Register on site"})
    
+    }catch(err){
+        res.send({"msg":"NOt able to add","error":err.message})
+    }
+    
 })
 // productRouter.patch("/update/:id", async (req,res) => {
 //     const noteID = req.params.id
@@ -27,6 +38,6 @@ productRouter.post("/create", async (req,res) => {
 //     await ProductModel.findByIdAndDelete({_id:noteID})
 //     res.send({"msg":`Note with id  ${noteID} has been delted`})
 // })
-// module.exports = {
-//     productRouter
-// }
+module.exports = {
+    productRouter
+}
