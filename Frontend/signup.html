@@ -49,99 +49,44 @@
 
 </html>
 <script>
-     document.getElementById("hide").addEventListener("click", function () {
+    document.getElementById("hide").addEventListener("click", function () {
 
-let cont = document.getElementById("container")
-cont.style.display = "none";
-
-
-})
-
-let form=document.querySelector("form")
-
-form.addEventListener("submit",(e)=>{
-     e.preventDefault()
-      console.log("hello")
-      let payload={
-        name:form.name.value,
-        email:form.email.value,
-        pass:form.password.value,
-        city:form.city.value
-       
-      }
-        fetch("http://localhost:8080/users/register",{
-        method:"POST",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:JSON.stringify(payload)
-    
-      }).then((res)=>{
-        return res.json()
-      }).then((res)=>{
-        console.log(res) 
-        window.location.assign("./index.html")
+        let cont = document.getElementById("container")
+        cont.style.display = "none";
 
 
-      }).catch((err)=>{
-        console.log(err)
-      })
-   
-      
-})
+    })
 
-// let form = document.querySelector('form')
-// form.addEventListener('submit', myfun)
-// function myfun(event) {
-//     event.preventDefault()
-//     const payload = {
-//             name: document.getElementById("name").value,
-//             email: document.getElementById("email").value,
-//             pass: document.getElementById("password").value,
-//             city: document.getElementById("city").value
-//         }
-//         console.log(payload)
 
-//         fetch("http://localhost:8080/users/register", {
-//             method: "POST",
-//             headers: {
-//                 "Content-type": "application/json"
-//             },
-//             body: JSON.stringify(payload)
-//         }).then((res) => {  return res.json()})
-//         .then((data) => {
-//             console.log(data)
-//         })
-//         .catch((err) => {
-//             console.log(err)
-//         })
-          
-            
-// }
 
-//  const onSignup = (ev) => {
-//         ev.preventDefault()
-        
-//         const payload = {
-//             name: document.getElementById("name").value,
-//             email: document.getElementById("email").value,
-//             pass: document.getElementById("password").value,
-//             city: document.getElementById("city").value
-//         }
-//         console.log(payload)
+    let form = document.querySelector('form')
+    form.addEventListener('submit', myfun)
+    function myfun(event) {
+        event.preventDefault()
+        const payload = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+            city: document.getElementById("city").value
+        }
+        console.log(payload)
 
-//         fetch("http://localhost:7080/users/register", {
-//             method: "POST",
-//             headers: {
-//                 "Content-type": "application/json"
-//             },
-//             body: JSON.stringify(payload)
-//         }).then(res => res.json())
-//             .then(res => console.log(res))
-//             .catch(err => console.log(err))
+        fetch("https://sore-bear-pocketbook.cyclic.app/users/register", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        }).then((res) => { return res.json() })
+            .then((data) => {
+                console.log(data)
+                window.location.assign("../Frontend/login.html")
+            })
+            .catch((err) => {
+                console.log(err)
+            })
 
-//     }
-   
 
+    }
 
 </script>

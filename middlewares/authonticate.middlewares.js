@@ -9,7 +9,7 @@ const authonticate = (req,res,next) => {
                 req.body.userID = decoded.userID
                 next()
             }else{
-                 res.send({"msg":"Please Login"})
+                 res.send({"msg":"pLease Login"})
             }
         });
     } else {

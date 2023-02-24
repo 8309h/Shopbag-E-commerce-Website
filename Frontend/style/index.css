@@ -192,8 +192,8 @@ img{
 @media (min-width: 100px) and (max-width: 700px){
     
     #nav1{
-        display: flex;
-        flex-direction: column;
+       
+        /* flex-direction: column; */
         flex-wrap: wrap;
         
     }
@@ -223,7 +223,7 @@ img{
         font-size: 30%;
         color: white;
         position: absolute;
-        top: 12%;
+        top: 10%;
         left: 5%;
         font-weight: bold;
         z-index: 1.0;

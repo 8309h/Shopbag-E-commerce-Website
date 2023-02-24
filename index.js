@@ -2,6 +2,9 @@ const express =  require("express")
 require('dotenv').config()
 const { connection } = require("./config/db")
 const { userRouter } = require("./routes/User.routes")
+const { productRouter } = require("./routes/Products.routes")
+const {UserModel} = require("./models/User.models")
+
 const {authonticate} =require("./middlewares/authonticate.middlewares")
 const cors = require("cors")
 
@@ -34,6 +37,7 @@ app.get("/usersdata",async(req,res) => {
 })
 app.use("/users",userRouter)
 app.use(authonticate)
+app.use("/products",productRouter)
 
 
 
