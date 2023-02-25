@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/product.css">
 </head>
 <body>
     <nav>
@@ -15,7 +16,8 @@
         <div id="black">Download our shop bags mobile app and your membership will extends by three month</div>
         <div id="nav1">
             <div id="logo">
-                <img src="./images/logo2.png" alt="">
+                <a href="./index.html">  <img src="./images/logo2.png" alt=""></a>
+              
 
             </div>
              <div id="links">
@@ -40,7 +42,33 @@
             </div>
         </div>
     </nav>  
-    <div id="container"></div>
+    <div id="main">
+        <div id="fix">
+            <p>Search Your Favorite Here </p>
+            <input type="search" oninput="search()" placeholder="What can we help you find?">
+            <p>Sort product by their category</p>
+            <select name="category" id="filter">
+              <option value="all">All</option>
+              <option value="Table">Table</option>
+              <option value="Chair">Chair</option>
+              <option value="Sofa">Sofa</option>
+              <option value="Storage Cabinet">Storage Cabinet</option>
+            </select>
+            <br />
+            <p> Aarrange product by their price</p>
+            <select name="sorting" id="sort">
+              <option value="">Sorting</option>
+              <option value="LTH">Lower-higher</option>
+              <option value="HTL">Higher-lower</option>
+            </select>
+           <h1>👜</h1>
+          </div>
+          <div id="scroll">
+            <div id="container"></div>
+          </div>
+        
+    </div>
+   
     
     <footer>
         <div id="foot1">

@@ -1,0 +1,129 @@
+#flex {
+    
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 5%;
+}
+#total {
+   
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 17%;
+    padding: 2%;
+    
+
+}
+
+#total h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color:  #222;;
+}
+#finalprice{
+   
+    margin: auto;
+    padding: 2%;
+    margin-top: 2%;
+    border-radius:5px ;
+
+
+}
+
+
+#finalprice input {
+    width: 90%;
+    margin: auto;
+    padding: 3% 0px 3% 0px;
+    margin-bottom: 7px;
+    margin-left: 15px;
+    text-align: center;
+
+}
+
+#finalprice +a>button {
+    width: 90%;
+    margin: auto;
+    padding: 3% 0px 3% 0px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 15px;
+
+
+}
+
+#finalprice +a>button:hover {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #666;
+    border: none;
+    border-radius: 5px;
+}
+
+ #offer {
+   
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+   
+
+} 
+
+#offer>p {
+    font-size: 20px;
+    border: none;
+
+} 
+#cart-container{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    gap: 3%;
+    margin-left: 40%;
+    margin-bottom: 100px;
+}
+#cart-container>div {
+    width: 95%;
+    display: flex;
+    gap: 7%;
+    padding: 1%;
+    /* box-shadow: rgba(7, 7, 7, 0.35) 0px 5px 15px; */
+    border: 1px solid gray;
+   
+
+}
+#cart-container>div img{
+    width: 100%;
+    
+
+}
+#cart-container>div>div+div{
+   width: 70%;
+}
+
+
+#cart-container>div>div p{
+    font-weight: bold;
+}
+#cart-container>div button{
+    background-color: lavender;
+    color: black;
+    padding: 2% 5%;
+    margin-right: 2%;
+    border: none;
+}
+#cart-container>div button+button{
+    background-color: black;
+    color: white;
+    padding: 2% 5%;
+} 
+
+
