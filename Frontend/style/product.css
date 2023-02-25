@@ -1,69 +1,55 @@
 #main{
-    width: 90%;
+    
     display: flex;
+    width: 90%;
     margin: auto;
-    justify-content: space-between;
+    gap: 5%;
    
+}
+#fix {
+    width: 25%;
+    position: fixed;
+    z-index: 1;
+    top: 17%;
+    padding: 2%;
     
+}
+#scroll{
+    height: auto;
+    width: 70%;
+    margin-left: 40%;
+    margin-bottom: 100%;
     
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+#container>div {
+    width: 95%;
+    display: flex;
+    gap: 7%;
+    padding: 1%;
+    /* box-shadow: rgba(7, 7, 7, 0.35) 0px 5px 15px; */
+    border: 1px solid gray;
+   
 
 }
-
-
-#container>div {
+#container>div img{
     width: 100%;
-     display: flex;
-     gap: 10%;
-     padding: 20px;
-    box-shadow: rgba(7, 7, 7, 0.35) 0px 5px 15px;
-   
+    
 
 }
 #container>div>div+div{
    
     width: 70%;
 }
-#container>div>img{
-    width: 100%;
-    
 
-}
+
 #container>div>div p{
     font-weight: bold;
-}
-#fix {
-    width: 35%;
-    position: fixed;
-    z-index: 1;
-    top: 17%;
-   
-    padding: 2%;
-}
-
-#fix p {
-    font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
-        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:  black;
-    font-size: 17px;
-}
-
-#fix select,input {
-    width: 100%;
-    margin: auto;
-    padding: 10px 0px;
-}
-
-#fix h1 {
-    font-size: 6.0rem;
-    margin-top: 10px;
-    text-align: center;
-}
-
-#scroll{
-   
-    width: 60%;
-    margin-left: 50%;
 }
 #container>div button{
     background-color: lavender;
@@ -76,7 +62,35 @@
     background-color: black;
     color: white;
     padding: 2% 5%;
+} 
+#fix select,input {
+    width: 100%;
+    margin: auto;
+    padding: 10px 0px;
 }
+
+#fix h1 {
+    font-size: 6.0rem;
+    margin-top: 10px;
+    text-align: center;
+}
+#fix p {
+    
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:  black;
+    font-size: 17px;
+}
+footer{
+    align-self: baseline;
+}
+
+
+
+
+
+
 @media (min-width: 100px) and (max-width: 700px){
     nav{
         position: fixed;
@@ -94,6 +108,11 @@
         z-index: -1;
       
     }
+    #container{
+        
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        gap: 2%;
+    }
 
 }
-
