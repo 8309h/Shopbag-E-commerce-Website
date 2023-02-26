@@ -1,0 +1,87 @@
+form {
+    width: 400px;
+    padding: 20px;
+    background-color: whitesmoke;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 2px solid  gray;
+    
+  
+  }
+  
+  
+  input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px 0px;
+  }
+  input[type="submit"]:hover {
+    background-color: orangered;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+   }
+   #black{
+    background-color: black;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid white;
+}
+#nav1{
+    display: flex;
+    justify-content: space-between;
+    height:15%;
+    
+}
+#nav1 #links{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    gap: 20px;
+    font-weight: bold;
+   
+    margin-left: 10%;
+   
+}
+#nav1 div>a>button{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+   font-weight: bold;
+}
+#logo{
+    width: 17%;
+    height: 75px;
+}
+#logo img{
+    width: 150%;
+    height: 100%;
+    
+    
+}
+#links2{
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+    gap: 20px;
+}
+img{
+    width: 100%;
+}
+#links2 a{
+    text-decoration: none;
+    color: black;
+    /* background-color: black; */
+}
+input{
+    text-align: center;
+}

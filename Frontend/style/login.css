@@ -74,3 +74,60 @@ form {
 form p,h3{
     text-align: left;
 }
+ nav{
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+#black2{
+    background-color: black;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid white;
+}
+#nav1{
+    display: flex;
+    justify-content: space-between;
+    height:15%;
+    
+}
+#nav1 #links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    gap: 20px;
+    font-weight: bold;
+   
+   
+   
+}
+#nav1 div>a>button{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+   font-weight: bold;
+}
+#links2{
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+    gap: 20px;
+}
+#links2 a{
+    text-decoration: none;
+    color: black;
+    /* background-color: black; */
+}
+img{
+    width: 100%;
+} 

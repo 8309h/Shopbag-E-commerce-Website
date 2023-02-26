@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product page</title>
+    <title>Wishlist_page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/product.css">
+    <link rel="stylesheet" href="style/wishlist.css">
+    
 </head>
 <body>
     <nav>
@@ -16,9 +17,7 @@
         <div id="black">Download our shop bags mobile app and your membership will extends by three month</div>
         <div id="nav1">
             <div id="logo">
-                <a href="./index.html">  <img src="./images/logo2.png" alt=""></a>
-              
-
+                <a href="./index.html"><img src="./images/logo2.png" alt=""></a>
             </div>
             <div id="links">
                 <a href="./product.html"><button>WOMEN</button></a>
@@ -30,11 +29,10 @@
                 <a href="./product.html"><button>COMMUNITY</button></a>
                 <a href="./product.html"><button>SALE</button></a>
             </div> 
-            
             <div id="links2">
                 <a href="#">Welcome : <span id="welcome"></span></a>
                 <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-                <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span>
+                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span>
                 <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span id="cartcount"></span>
                 <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> </a>
 
@@ -42,33 +40,15 @@
             </div>
         </div>
     </nav>  
-    <div id="main">
-        <div id="fix">
-            <p>Search Your Favorite Here </p>
-            <input type="search" oninput="search()" placeholder="What can we help you find?">
-            <p>Sort product by their category</p>
-            <select name="category" id="filter">
-              <option value="all">All</option>
-              <option value="men's clothing">Men's</option>
-              <option value="women's clothing">Women's</option>
-              
-            </select>
-            <br />
-            <p> Aarrange product by their price</p>
-            <select name="sorting" id="sort">
-              <option value="">Sorting</option>
-              <option value="LTH">Lower-higher</option>
-              <option value="HTL">Higher-lower</option>
-            </select>
-           <h1>👜</h1>
-          </div>
-          <div id="scroll">
-            <div id="container"></div>
-          </div>
-        
-    </div>
-   
+
+       <h1 style="text-align: center; font-size: 30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Your's Dream Product</h1>
     
+        
+        <div id="card-container">
+          <!-- Here Append All the cart Products  -->
+        </div>
+    
+      
     <footer>
         <div id="foot1">
             <div>
@@ -137,4 +117,4 @@
     
 </body>
 </html>
-<script src="./script/products.js"></script>
+<script src="./script/wishlist.js"></script>
