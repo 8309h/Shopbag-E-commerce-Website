@@ -4,6 +4,7 @@ const { connection } = require("./config/db")
 const { userRouter } = require("./routes/User.routes")
 const { productRouter } = require("./routes/Products.routes")
 const {UserModel} = require("./models/User.models")
+const {ProductModel} = require("./models/Post.model")
 
 
 const {authonticate} =require("./middlewares/authonticate.middlewares")
