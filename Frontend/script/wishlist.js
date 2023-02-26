@@ -3,9 +3,7 @@ let container = document.getElementById("card-container");
 let displaywishcount = document.getElementById("wishcount");
 
 
-let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
-    console.log(logeduser)
-    document.querySelector("#welcome").textContent = logeduser.name;
+
 
 let  cart  = JSON.parse(localStorage.getItem("shopcartdata")) || [];
 let  wishListData  = JSON.parse(localStorage.getItem("shopwishlist")) || [];

@@ -27,17 +27,34 @@ productRouter.post("/create", async (req,res) => {
     }
     
 })
-// productRouter.patch("/update/:id", async (req,res) => {
-//     const noteID = req.params.id
-//     await ProductModel.findByIdAndUpdate({_id:noteID})
-//     res.send({"msg":"Note with id has been updated"})
-// })
+productRouter.patch("/update/:id", async (req,res) => {
+    const productid = req.params.id
+    try{
+        await ProductModel.findByIdAndUpdate({_id:productid})
+        res.send({"msg":"Note with id has been updated"})
 
-// productRouter.delete("/delete/:id", async (req,res) => {
-//     const noteID = req.params.id
-//     await ProductModel.findByIdAndDelete({_id:noteID})
-//     res.send({"msg":`Note with id  ${noteID} has been delted`})
-// })
+    }catch(err){
+        console.log(err)
+        res.send({"msg":"product updated"})
+    }
+    
+    
+})
+productRouter.patch("/update/:id", async (req,res) => {
+    const productid = req.params.id
+    try{
+        await ProductModel.findByIdAndDelete({_id:productid})
+        res.send({"msg":"Note with id has been updated"})
+
+    }catch(err){
+        console.log(err)
+        res.send({"msg":"product updated"})
+    }
+    
+    
+})
+
+
 module.exports = {
     productRouter
 }

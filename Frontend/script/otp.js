@@ -1,4 +1,4 @@
-let logeduser = JSON.parse(localStorage.getItem("loggedUser")) || [];
+let logeduser = JSON.parse(localStorage.getItem("shoploggedUser")) || [];
 console.log(logeduser)
 document.querySelector("#welcome2").textContent = logeduser.name;
 

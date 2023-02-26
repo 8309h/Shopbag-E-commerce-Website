@@ -112,8 +112,11 @@ function myfun(event) {
         .then((res) => {
             console.log(res)
             localStorage.setItem("token",res.token)
-            // window.location.assign("../Frontend/index.html");
+           
             window.location.assign("../Frontend/payment.html");
+            
+           
+            
         })
         .catch((err) => {
             console.log(err)

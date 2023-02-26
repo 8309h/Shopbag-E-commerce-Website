@@ -11,14 +11,14 @@
     let obj = {
       name, cardNo, cvv
     }
-    localStorage.setItem("paymentinfo",obj)
-    
-
-    console.log(obj)
+    localStorage.setItem("shopbagpaymentinfo",obj)
+   
     if (obj.name == "" || obj.cardNo == "" || obj.cvv == "") {
       alert("Any of the Given fields are empty");
     } else {
-    
+        
+       
       window.location = "./otp.html"
+      
     }
   });

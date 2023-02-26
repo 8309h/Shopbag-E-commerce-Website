@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist_page</title>
+    <title>Document</title>
+</head>
+<body>
+    
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/wishlist.css">
-    
+    <link rel="stylesheet" href="style/cartpage.css">
+    <link rel="stylesheet" href="style/admin.css">
 </head>
 <body>
     <nav>
@@ -17,38 +30,70 @@
         <div id="black">Download our shop bags mobile app and your membership will extends by three month</div>
         <div id="nav1">
             <div id="logo">
-                <a href="./index.html"><img src="./images/logo2.png" alt=""></a>
+              <a href="./index.html"><img src="./images/logo2.png" alt=""></a>
             </div>
             <div id="links">
-                <a href="./product.html"><button>WOMEN</button></a>
-                <a href="./product.html"><button>MEN</button></a>
-                <a href="./product.html"><button>BEAUTY</button></a>
-                <a href="./product.html"><button>KIDS</button></a>
-                <a href="./product.html"><button>HOME</button></a>
-                <a href="./product.html"><button>DESIGNERS</button></a>
-                <a href="./product.html"><button>COMMUNITY</button></a>
-                <a href="./product.html"><button>SALE</button></a>
-            </div> 
-            <div id="links2">
-                
-                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span>
-                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span id="cartcount"></span>
-                <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> </a>
+              <a href="./product.html"><button>WOMEN</button></a>
+              <a href="./product.html"><button>MEN</button></a>
+              <a href="./product.html"><button>BEAUTY</button></a>
+              <a href="./product.html"><button>KIDS</button></a>
+              <a href="./product.html"><button>HOME</button></a>
+              <a href="./product.html"><button>DESIGNERS</button></a>
+              <a href="./product.html"><button>COMMUNITY</button></a>
+              <a href="./product.html"><button>SALE</button></a>
+          </div> 
+            
+          <div id="links2">
+           
+            <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+            <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span>
+            <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span id="cartcount"></span>
+            <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> </a>
 
 
-            </div>
+        </div>
+             
         </div>
     </nav>  
-
-       <h1 style="text-align: center; font-size: 30px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Your's Dream Product</h1>
-    
+    <div id="otpDiv">
+        <p>Sent to registered Mobile No : <span id="otpNum"></span> 
+  
+    <div id="inputDiv">
+        <input id="otp1" type="tel" maxlength="1" >
+        <input id="otp2" type="tel" maxlength="1" >
+        <input id="otp3" type="tel" maxlength="1" >
+        <input id="otp4" type="tel" maxlength="1" >
         
-        <div id="card-container">
-          <!-- Here Append All the cart Products  -->
-        </div>
-    
+    </div>
+    <!-- <a href="./index.html"></a> -->
+    <div id="butt">
+      <button id="checkotp" onclick="otpfun()"> CONFIRM </button></a>
+      <button id="resendotp" > RESEND <a href="./index.html"></a></button></a>
+    </div>
+  </div>
+    <form id="pdtadd">
+        <input type="text" placeholder="Title" required id="Title" /><br>
+        <select name="category" id="Category">
+            <option value="All">All</option>
+            <option value="men's clothing">Men's</option>
+            <option value="women's clothing">Women's</option>
+          
+          </select>
+        
+        <br />
+        <input type="url" placeholder="Image" required id="Image" />
+  
+        <br />
+       <input type="text" placeholder="Description" required id="Description" />
+        <br />
+        <input type="number" placeholder="Price" required id="Price" />
+        <br />
+        <button onclick="onAdd()"></button>
+        <!-- <input type="submit" /> -->
+      </form>
+
       
+    
     <footer>
         <div id="foot1">
             <div>
@@ -117,4 +162,4 @@
     
 </body>
 </html>
-<script src="./script/wishlist.js"></script>
+<script src="./script/admin.js"></script>
