@@ -38,8 +38,18 @@ app.get("/usersdata",async(req,res) => {
 })
 
 app.use("/users",userRouter)
-app.use("/products",productRouter)
+ productRouter.get("/data", async (req,res) => {
+        try{
+           const products = await ProductModel.find()
+           res.send(products)
+    
+        }catch(err){
+            res.send({"msg":"Coanot get products"})
+        }
+    })
 app.use(authonticate)
+app.use("/products",productRouter)
+// app.use(authonticate)
 
 
 app.listen(process.env.port, async () => {

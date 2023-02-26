@@ -7,7 +7,7 @@ let displaywishcount = document.getElementById("wishcount");
 
 let productArr=[];
 
-    let  url = "https://sore-bear-pocketbook.cyclic.app/products/"
+    let  url = "https://sore-bear-pocketbook.cyclic.app/data"
       async function getdata(){
 
         try{
@@ -15,7 +15,7 @@ let productArr=[];
           let out =  await res.json();
           productArr = out;
           console.log("harshal",productArr)
-          //displayData(productArr)
+          displayData(productArr)
 
         }catch(err){
          console.log(err);
@@ -26,161 +26,161 @@ let productArr=[];
       
 
 
-//         function displayData(data) {
-//             document.querySelector("#container").innerHTML = ""
-//              data.forEach(function (el) {
-//                 let div = document.createElement("div")
+        function displayData(data) {
+            document.querySelector("#container").innerHTML = ""
+             data.forEach(function (el) {
+                let div = document.createElement("div")
          
-//                  let div1 = document.createElement("div")
+                 let div1 = document.createElement("div")
          
-//                  let image = document.createElement("img")
-//                  image.setAttribute("src", el.Image)
-//                  let div2 = document.createElement("div")
+                 let image = document.createElement("img")
+                 image.setAttribute("src", el.Image)
+                 let div2 = document.createElement("div")
          
-//                  let title = document.createElement("h3")
-//                  title.textContent = el.Title;
+                 let title = document.createElement("h3")
+                 title.textContent = el.Title;
          
-//                  let desc = document.createElement("p")
-//                  desc.textContent =  el.Description
+                 let desc = document.createElement("p")
+                 desc.textContent =  el.Description
          
-//                  let category = document.createElement("p")
-//                  category.textContent = el.Catogory
+                 let category = document.createElement("p")
+                 category.textContent = el.Catogory
 
-//                  let price = document.createElement("p")
-//                  price.textContent = "₹ " +el.Price
+                 let price = document.createElement("p")
+                 price.textContent = "₹ " +el.Price
          
-//                  let buynow = document.createElement("button")
-//                  buynow.textContent = "CART"
+                 let buynow = document.createElement("button")
+                 buynow.textContent = "CART"
              
          
-//                  buynow.addEventListener("click", function () {
+                 buynow.addEventListener("click", function () {
          
                      
                     
-//                      let  cart  = JSON.parse(localStorage.getItem("shopcartdata")) || [];
+                     let  cart  = JSON.parse(localStorage.getItem("shopcartdata")) || [];
          
-//                      let datapresent = false;
-//                      for (let i = 0; i < cart.length; i++) {
+                     let datapresent = false;
+                     for (let i = 0; i < cart.length; i++) {
          
-//                          if (cart[i]._id == el._id) {
-//                              datapresent = true;
-//                              break;
-//                          }
-//                      }
+                         if (cart[i]._id == el._id) {
+                             datapresent = true;
+                             break;
+                         }
+                     }
          
-//                      console.log(datapresent)
-//                      if (datapresent == true) {
-//                          alert("Product Already in Cart❌");
+                     console.log(datapresent)
+                     if (datapresent == true) {
+                         alert("Product Already in Cart❌");
          
-//                      } else {
-//                          cart.push({ ...el, quantity: 1 });
-//                          localStorage.setItem("shopcartdata", JSON.stringify(cart));
-//                          alert("Product Added To Cart ✔");
-//                          location.href="cart.html"
+                     } else {
+                         cart.push({ ...el, quantity: 1 });
+                         localStorage.setItem("shopcartdata", JSON.stringify(cart));
+                         alert("Product Added To Cart ✔");
+                         location.href="cart.html"
          
-//                      }
-//                  })
+                     }
+                 })
          
                        
-//                  let but=document.createElement("button")
-//                  but.textContent = "WISHLIST"
+                 let but=document.createElement("button")
+                 but.textContent = "WISHLIST"
          
-//                  but.addEventListener("click",function(){
+                 but.addEventListener("click",function(){
                 
          
-//                  let wishListData = JSON.parse(localStorage.getItem("shopwishlist"))  || [];
+                 let wishListData = JSON.parse(localStorage.getItem("shopwishlist"))  || [];
          
-//                      let datapresent = false;
-//                      for (let i = 0; i <  wishListData.length; i++) {
+                     let datapresent = false;
+                     for (let i = 0; i <  wishListData.length; i++) {
          
-//                          if ( wishListData[i]._id == el._id) {
-//                              datapresent = true;
-//                              break;
-//                          }
-//                      }
+                         if ( wishListData[i]._id == el._id) {
+                             datapresent = true;
+                             break;
+                         }
+                     }
          
-//                      console.log(datapresent)
-//                      if (datapresent == true) {
-//                          alert("Product Already in wishlist ❌");
+                     console.log(datapresent)
+                     if (datapresent == true) {
+                         alert("Product Already in wishlist ❌");
          
-//                      } else {
-//                          wishListData.push({ ...el, quantity: 1 });
-//                          localStorage.setItem("shopwishlist", JSON.stringify(wishListData)) ;
-//                          alert("Product Added To Wishlist ✔");
-//                          location.href="wishlist.html"
+                     } else {
+                         wishListData.push({ ...el, quantity: 1 });
+                         localStorage.setItem("shopwishlist", JSON.stringify(wishListData)) ;
+                         alert("Product Added To Wishlist ✔");
+                         location.href="wishlist.html"
          
-//                      }
+                     }
          
-//                })
-//                  div1.append(image)
-//                  div2.append(title,desc,category,price,buynow,but)
-//                  div.append(div1,div2)
+               })
+                 div1.append(image)
+                 div2.append(title,desc,category,price,buynow,but)
+                 div.append(div1,div2)
          
-//                  document.querySelector("#container").append(div);
+                 document.querySelector("#container").append(div);
          
          
-//              })
-//          }
+             })
+         }
         
        
-//          function search() {
-//             let q = document.querySelector("input").value;
+         function search() {
+            let q = document.querySelector("input").value;
            
-//             let newData = productArr.filter(function (el) {
-//                 return el.Title.toLowerCase().includes(q.toLowerCase());
-//             });
+            let newData = productArr.filter(function (el) {
+                return el.Title.toLowerCase().includes(q.toLowerCase());
+            });
         
-//            // console.log(newData)
-//             displayData(newData);
-//         }
-// let prio = document.querySelector("#filter");
+           // console.log(newData)
+            displayData(newData);
+        }
+let prio = document.querySelector("#filter");
 
-// prio.addEventListener("change", function (event){
-//     event.preventDefault();
+prio.addEventListener("change", function (event){
+    event.preventDefault();
 
-//     let selected = event.target.value;
+    let selected = event.target.value;
 
-//     if (selected == "all") {
-//         displayData(productArr)
+    if (selected == "all") {
+        displayData(productArr)
        
-//     } else {
+    } else {
 
-//         let filtered_data = productArr.filter(function (el) {
-//             return el.Catogory == selected
-//         });
-//         displayData(filtered_data)
+        let filtered_data = productArr.filter(function (el) {
+            return el.Catogory == selected
+        });
+        displayData(filtered_data)
       
-//     }
+    }
 
-// });
+});
 
-// let sorted = document.querySelector("#sort");
+let sorted = document.querySelector("#sort");
 
-// sorted.addEventListener("change", function (event) {
+sorted.addEventListener("change", function (event) {
 
-//     let val = document.querySelector("#sort").value;
-//     //console.log(val)
+    let val = document.querySelector("#sort").value;
+    //console.log(val)
 
-//     if (val == "LTH") {
-//         let data1 = productArr.sort(function (a, b) {
-//             return a.Price - b.Price;
+    if (val == "LTH") {
+        let data1 = productArr.sort(function (a, b) {
+            return a.Price - b.Price;
 
-//         })
+        })
        
-//         displayData(data1)
-//     } else if (val == "HTL") {
-//         let sorteddata = productArr.sort(function (a, b) {
-//             return b.Price - a.Price;
+        displayData(data1)
+    } else if (val == "HTL") {
+        let sorteddata = productArr.sort(function (a, b) {
+            return b.Price - a.Price;
 
-//         })
-//         displayData(sorteddata)
+        })
+        displayData(sorteddata)
        
-//     } else {
-//         displayData(productArr)
+    } else {
+        displayData(productArr)
      
         
-//     }
-// })
+    }
+})
         
          
          
