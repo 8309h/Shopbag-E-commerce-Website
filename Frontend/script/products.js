@@ -7,7 +7,7 @@ let displaywishcount = document.getElementById("wishcount");
 
 let productArr=[];
 
-    let  url = "https://sore-bear-pocketbook.cyclic.app/data"
+    let  url = "https://sore-bear-pocketbook.cyclic.app/products/"
       async function getdata(){
 
         try{

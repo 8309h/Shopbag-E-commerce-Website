@@ -4,7 +4,7 @@ const { connection } = require("./config/db")
 const { userRouter } = require("./routes/User.routes")
 const { productRouter } = require("./routes/Products.routes")
 const {UserModel} = require("./models/User.models")
-const {ProductModel} = require("./models/Post.model")
+
 
 
 const {authonticate} =require("./middlewares/authonticate.middlewares")
@@ -39,18 +39,10 @@ app.get("/usersdata",async(req,res) => {
 })
 
 app.use("/users",userRouter)
- productRouter.get("/data", async (req,res) => {
-        try{
-           const products = await ProductModel.find()
-           res.send(products)
-    
-        }catch(err){
-            res.send({"msg":"Coanot get products"})
-        }
-    })
-app.use(authonticate)
+ 
+
 app.use("/products",productRouter)
-// app.use(authonticate)
+app.use(authonticate)
 
 
 app.listen(process.env.port, async () => {
