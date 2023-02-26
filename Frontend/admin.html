@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cart page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style//cartpage.css">
+    <link rel="stylesheet" href="style/cartpage.css">
+    <link rel="stylesheet" href="style/admin.css">
 </head>
 <body>
     <nav>
@@ -41,32 +55,45 @@
              
         </div>
     </nav>  
-    <div id="flex">
-        <div id="total">
-          <h1>Total Payabale Amount:- <span id="cart-total">0</span></h1>
-          <div id="finalprice">
-            <form >
-              <input  type="text" id="cupon-filled" placeholder="Enter coupen code here" />
-              <br>
+    <div id="otpDiv">
+        <p>Sent to registered Mobile No : <span id="otpNum"></span> 
+  
+    <div id="inputDiv">
+        <input id="otp1" type="tel" maxlength="1" >
+        <input id="otp2" type="tel" maxlength="1" >
+        <input id="otp3" type="tel" maxlength="1" >
+        <input id="otp4" type="tel" maxlength="1" >
+        
+    </div>
+    <!-- <a href="./index.html"></a> -->
+    <div id="butt">
+      <button id="checkotp" onclick="otpfun()"> CONFIRM </button></a>
+      <button id="resendotp" > RESEND <a href="./index.html"></a></button></a>
+    </div>
+  </div>
+    <form id="pdtadd">
+        <input type="text" placeholder="Title" required id="Title" /><br>
+        <select name="category" id="Category">
+            <option value="All">All</option>
+            <option value="men's clothing">Men's</option>
+            <option value="women's clothing">Women's</option>
+          
+          </select>
+        
+        <br />
+        <input type="url" placeholder="Image" required id="Image" />
+  
+        <br />
+       <input type="text" placeholder="Description" required id="Description" />
+        <br />
+        <input type="number" placeholder="Price" required id="Price" />
+        <br />
+        <button onclick="onAdd()"></button>
+        <!-- <input type="submit" /> -->
+      </form>
+
       
-              <input type="submit">
-            </form>
-          </div>
-         
     
-          <a href="login.html"><button>Buy Now</button></a>
-          <div id="offer">
-            <!-- <p>Use the coupen code Harsh30 and get the discount upto 30% off </p> -->
-            <p>USE(HM-dec) => 30% off</p>
-            <p>USE(HM-decor) => 50% off</p>
-            <p id="smile" style="font-size: 60px;">🛒</p>
-          </div>
-        </div>
-        <div id="cart-container">
-          <!-- Here Append All the cart Products  -->
-        </div>
-      </div>
-      
     <footer>
         <div id="foot1">
             <div>
@@ -135,4 +162,4 @@
     
 </body>
 </html>
-<script src="./script/cartpage.js"></script>
+<script src="./script/admin.js"></script>

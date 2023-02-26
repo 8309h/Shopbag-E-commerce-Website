@@ -8,9 +8,41 @@
     <title>Login Page</title>
     <!-- <link rel="stylesheet" href="./style/style.css"> -->
     <link rel="stylesheet" href="style/login.css">
+ <!-- <link rel="stylesheet" href="style/index.css"> -->
 </head>
 
 <body>
+    <nav>
+
+        <div id="black2">Download our shop bags mobile app and your membership will extends by three month</div>
+        <div id="nav1">
+            <div id="logoapp">
+                <a href="./index.html"><img src="./images/logo2.png" alt=""></a>
+                
+
+            </div>
+             <div id="links">
+                <a href="./product.html"><button>WOMEN</button></a>
+                <a href="./product.html"><button>MEN</button></a>
+                <a href="./product.html"><button>BEAUTY</button></a>
+                <a href="./product.html"><button>KIDS</button></a>
+                <a href="./product.html"><button>HOME</button></a>
+                <a href="./product.html"><button>DESIGNERS</button></a>
+                <a href="./product.html"><button>COMMUNITY</button></a>
+                <a href="./product.html"><button>SALE</button></a>
+            </div> 
+            
+            <div id="links2">
+                <!-- <a href="#">Welcome : <span id="welcome"></span></a>
+                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span>
+                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span id="cartcount"></span>
+                <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> </a> -->
+
+
+            </div>
+        </div>
+    </nav>  
     <div id="container">
 
         <div id="black">
@@ -47,27 +79,7 @@
 <script>
 
     
-    // const onLogin = () => {
-    //     const payload = {
-    //         email: document.getElementById("email").value,
-    //         pass: document.getElementById("pass").value
-
-    //     }
-    //     fetch("https://sore-bear-pocketbook.cyclic.app/users/login", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-type": "application/json"
-    //         },
-    //         body: JSON.stringify(payload)
-    //     }).then(res => res.json())
-    //         .then(res => {
-    //             console.log(res)
-    //             localStorage.setItem("token",res.token)
-    //             window.location.assign("../Frontend/index.html");
-    //         })
-    //         .catch(err => console.log(err))
-
-    // }
+    
     document.getElementById("hide").addEventListener("click",function() {
 
      let cont = document.getElementById("container")
@@ -100,7 +112,11 @@ function myfun(event) {
         .then((res) => {
             console.log(res)
             localStorage.setItem("token",res.token)
-            window.location.assign("../Frontend/index.html");
+           
+            window.location.assign("../Frontend/payment.html");
+            
+           
+            
         })
         .catch((err) => {
             console.log(err)

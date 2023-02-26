@@ -1,0 +1,45 @@
+#card-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 3%;
+    margin: auto;
+   
+    margin-bottom: 100px;
+}
+#card-container>div {
+    width: 95%;
+    display: flex;
+    gap: 7%;
+    padding: 1%;
+    /* box-shadow: rgba(7, 7, 7, 0.35) 0px 5px 15px; */
+    border: 1px solid gray;
+   
+
+}
+#card-container>div img{
+    width: 100%;
+    
+
+}
+#card-container>div>div+div{
+   width: 70%;
+}
+
+
+#card-container>div>div p{
+    font-weight: bold;
+}
+#card-container>div button{
+    background-color: lavender;
+    color: black;
+    padding: 2% 5%;
+    margin-right: 2%;
+    border: none;
+}
+#card-container>div button+button{
+    background-color: black;
+    color: white;
+    padding: 2% 5%;
+} 

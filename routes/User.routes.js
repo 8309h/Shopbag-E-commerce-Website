@@ -47,13 +47,13 @@ userRouter.post("/login", async (req, res) => {
                     res.send({ "msg": "Login sucess", "token": token })
 
                 } else {
-                    res.send("Wrong Credentilas")
+                    res.send({"msg":"Wrong Credentilas"})
                 }
             
             });
 
         } else {
-            res.send("Credentilas not found")
+            res.send({"msg":"Credentilas not found"})
         }
     }
     catch (err) {

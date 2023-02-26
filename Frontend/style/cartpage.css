@@ -125,5 +125,21 @@
     color: white;
     padding: 2% 5%;
 } 
+form input{
+    text-align: center;
+}
+
+@media (min-width: 100px) and (max-width: 700px){
+
+    #cart-container{
+        width: 50%;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        gap: 3%;
+        margin-left: 60%;
+        margin-bottom: 100px;
+    }
+
+}
 
 
