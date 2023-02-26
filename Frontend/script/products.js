@@ -75,6 +75,7 @@ let productArr=[];
                          cart.push({ ...el, quantity: 1 });
                          localStorage.setItem("shopcartdata", JSON.stringify(cart));
                          alert("Product Added To Cart ✔");
+                         location.href="cart.html"
          
                      }
                  })
@@ -105,6 +106,7 @@ let productArr=[];
                          wishListData.push({ ...el, quantity: 1 });
                          localStorage.setItem("shopwishlist", JSON.stringify(wishListData)) ;
                          alert("Product Added To Wishlist ✔");
+                         location.href="wishlist.html"
          
                      }
          

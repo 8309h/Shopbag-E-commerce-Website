@@ -63,6 +63,7 @@ function displayProducts(data) {
                 cart.push({ ...el, quantity: 1 });
                 localStorage.setItem("shopcartdata", JSON.stringify(cart));
                 alert("Product Added To Cart ✔");
+                location.href="cart.html"
                 remove()
 
             }
