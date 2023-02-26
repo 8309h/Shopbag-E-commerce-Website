@@ -11,9 +11,6 @@ productRouter.get("/", async (req,res) => {
     }catch(err){
         res.send({"msg":"Coanot get products"})
     }
-    
-
-    
 })
 productRouter.post("/create", async (req,res) => {
     const payload = req.body
@@ -40,7 +37,7 @@ productRouter.patch("/update/:id", async (req,res) => {
     
     
 })
-productRouter.patch("/update/:id", async (req,res) => {
+productRouter.patch("/delete/:id", async (req,res) => {
     const productid = req.params.id
     try{
         await ProductModel.findByIdAndDelete({_id:productid})
