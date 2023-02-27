@@ -1,3 +1,10 @@
+#otpDiv{
+  width: 30%;
+  margin: auto;
+  background-color: gray;
+  display: block;
+
+}
 #inputDiv{
     width:70%;
     text-align: center;
@@ -10,4 +17,15 @@
     margin-right: 5px;
     padding: 5%;
     font-size: 25px;
+  }
+  #addproduct{
+    margin: auto;
+    width: 20%;
+    padding: 5%;
+    background-color: whitesmoke;
+  }
+  #addproduct input,select{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px 0px ;
   }
