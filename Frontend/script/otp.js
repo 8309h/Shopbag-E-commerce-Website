@@ -1,6 +1,4 @@
-let logeduser = JSON.parse(localStorage.getItem("shoploggedUser")) || [];
-console.log(logeduser)
-document.querySelector("#welcome2").textContent = logeduser.name;
+
 
 
 
@@ -37,6 +35,7 @@ function otpfun() {
 function otp() {
     let pass = Math.floor(1000 + Math.random() * 9000)
     return pass;
+    console.log(pass)
 }
 
 document.querySelector("#resendotp").addEventListener("click", function (e) {
