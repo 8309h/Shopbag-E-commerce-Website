@@ -6,126 +6,129 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <!-- <link rel="stylesheet" href="./style/style.css"> -->
     <link rel="stylesheet" href="style/login.css">
- <!-- <link rel="stylesheet" href="style/index.css"> -->
 </head>
 
 <body>
     <nav>
-
-        <div id="black2">Download our shop bags mobile app and your membership will extends by three month</div>
+        <div id="black2">Download our shop bags mobile app and your membership will extend by three months</div>
         <div id="nav1">
             <div id="logoapp">
                 <a href="./index.html"><img src="./images/logo2.png" alt=""></a>
-                
-
             </div>
-             <div id="links">
+            <div id="links">
                 <a href="./product.html"><button>WOMEN</button></a>
                 <a href="./product.html"><button>MEN</button></a>
-                <a href="./product.html"><button>BEAUTY</button></a>
+                <a href="./aboutus.html"><button>ABOUT</button></a>
                 <a href="./product.html"><button>KIDS</button></a>
                 <a href="./product.html"><button>HOME</button></a>
                 <a href="./product.html"><button>DESIGNERS</button></a>
                 <a href="./product.html"><button>COMMUNITY</button></a>
                 <a href="./product.html"><button>SALE</button></a>
-            </div> 
-            
-            <div id="links2">
-                <!-- <a href="#">Welcome : <span id="welcome"></span></a>
-                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-                <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span>
-                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span id="cartcount"></span>
-                <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> </a> -->
-
-
             </div>
         </div>
-    </nav>  
+    </nav>
     <div id="container">
-
         <div id="black">
             <div id="logo">
                 <img src="./images/logo2.png" alt="">
-             </div>
-                <h1>We are your <br>Shoping Assistance</h1>
-                <p>WITH US YOU CAN</p>
-                <h3>👜COMPARE WITH 500+ STORE</h3>
-                <h3>⏰GET ALERTS ON YOUR ITEMS</h3>
-                <h3>🔎SAVE YOUR SEARCHES</h3>
-                <h3>🛒MANAGE YOUR SHOPING LIST</h3>
-                <h3>🤑EARN POINTS</h3>
+            </div>
+            <h1>We are your <br>Shopping Assistance</h1>
+            <p>WITH US YOU CAN</p>
+            <h3>👜COMPARE WITH 500+ STORE</h3>
+            <h3>⏰GET ALERTS ON YOUR ITEMS</h3>
+            <h3>🔎SAVE YOUR SEARCHES</h3>
+            <h3>🛒MANAGE YOUR SHOPPING LIST</h3>
+            <h3>🤑EARN POINTS</h3>
         </div>
         <div id="white">
             <button id="hide" style="text-align: end; font-size:25px;">X</button>
-            <form>
-                 <h1>Log in to your account</h1><br>
-                
+            <form id="loginForm">
+                <h1>Log in to your account</h1><br>
                 <label>E-mail</label><br>
-                <input id="email" type="email" placeholder="Enter your email"><br>
+                <input id="email" type="email" placeholder="Enter your email" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
                 <label for="pwd">Password</label><br>
-                <input type="password" id="password" name="pwd" minlength="4" placeholder="Enter password">
-                <!-- <button onclick="onLogin()">Login</button> -->
-                <input type="submit" value="submit">
-                <h3> Do not have an account? <a style="text-decoration:none; color: black;" href="signup.html">Sign-up</a></h3>
+                <div style="position: relative;">
+                    <input type="password" id="password" name="pwd" minlength="4" placeholder="Enter password" required>
+                    <span id="eye" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;"
+                        onclick="togglePasswordVisibility()">👁️</span>
+                </div>
+                <input type="submit" value="Submit">
+                <h3>Do not have an account? <a style="text-decoration:none; color: black;" href="signup.html">Sign-up</a></h3>
             </form>
         </div>
-        
     </div>
 </body>
 
 </html>
 <script>
+    document.getElementById("hide").addEventListener("click", function () {
+        let cont = document.getElementById("container");
+        cont.style.display = "none";
+    });
 
-    
-    
-    document.getElementById("hide").addEventListener("click",function() {
+    let form = document.getElementById('loginForm');
+    form.addEventListener('submit', myfun);
 
-     let cont = document.getElementById("container")
-     cont.style.display = "none";
+    function myfun(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            const payload = {
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value,
+            };
+            let deployed = "/users/register";
+            let localhosturl = "http://localhost:8080/users/login";
 
-        
-})
-
-let form = document.querySelector('form')
-form.addEventListener('submit', myfun)
-function myfun(event) {
-    event.preventDefault()
-    const payload = {
-           
-            email: document.getElementById("email").value,
-            password: document.getElementById("password").value,
-           
+            fetch(localhosturl, {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json",
+                },
+                body: JSON.stringify(payload),
+            })
+                .then((res) => res.json())
+                .then((res) => {
+                    console.log(res);
+                    localStorage.setItem("token", res.token);
+                    location.href = "index.html";
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
         }
-       
+    }
 
-        fetch("https://sore-bear-pocketbook.cyclic.app/users/login", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify(payload)
-        }).then((res) => {  
-            return res.json()
-        })
-        .then((res) => {
-            console.log(res)
-            localStorage.setItem("token",res.token)
-           
-            // window.location.assign("");
-           location.href = "payment.html"
-            
-           
-            
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-          
-            
-}
+    function validateForm() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
 
-    
+        if (email === "" || password === "") {
+            alert("All fields are required");
+            return false;
+        }
 
+        // Validate email using regex
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
+            alert("Invalid email format");
+            return false;
+        }
+
+        return true;
+    }
+
+    function togglePasswordVisibility() {
+        const passwordField = document.getElementById("password");
+        const eyeIcon = document.getElementById("eye");
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            eyeIcon.textContent = "👁️";
+        } else {
+            passwordField.type = "password";
+            eyeIcon.textContent = "🔒";
+        }
+    }
 </script>

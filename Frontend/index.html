@@ -8,6 +8,7 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style/index.css">
+
 </head>
 
 <body>
@@ -19,17 +20,16 @@
             <div id="logo">
                 <a href="./index.html"><img src="./images/logo2.png" alt=""></a>
                 
-
             </div>
              <div id="links">
                 <a href="./product.html"><button>WOMEN</button></a>
-                <a href="./product.html"><button>MEN</button></a>
-                <a href="./product.html"><button>BEAUTY</button></a>
-                <a href="./product.html"><button>KIDS</button></a>
-                <a href="./product.html"><button>HOME</button></a>
-                <a href="./product.html"><button>DESIGNERS</button></a>
-                <a href="./product.html"><button>COMMUNITY</button></a>
-                <a href="./product.html"><button>SALE</button></a>
+                <a href="./mensproduct.html"><button>MEN</button></a>
+                <a href="./aboutus.html"><button>ABOUT</button></a>
+                <a href="#"><button>KIDS</button></a>
+                <a href="#"><button>HOME</button></a>
+                <a href="#"><button>DESIGNERS</button></a>
+                <a href="#"><button>COMMUNITY</button></a>
+                <a href="#"><button>SALE</button></a>
                 <a href="./admin.html"><button style="color: white; background-color: black;">ADMIN</button></a>
             </div>
             
@@ -44,6 +44,42 @@
             </div>
         </div>
     </nav>  
+    <!-- <div id="signupModal" style="display: block; background-color: aqua;" >
+        
+
+        <div id="black">
+            <div id="logo">
+                <img src="./images/logo2.png" alt="">
+            </div>
+            <h1>We are your <br>Shopping Assistance</h1>
+            <p>WITH US YOU CAN</p>
+            <h3>👜COMPARE WITH 500+ STORE</h3>
+            <h3>⏰GET ALERTS ON YOUR ITEMS</h3>
+            <h3>🔎SAVE YOUR SEARCHES</h3>
+            <h3>🛒MANAGE YOUR SHOPPING LIST</h3>
+            <h3>🤑EARN POINTS</h3>
+        </div>
+        <div id="white">
+            <button id="hide" style="text-align: end; font-size:25px;">X</button>
+            <form id="signupForm">
+                <h2>REGISTER</h2>
+                <label>Full Name</label><br>
+                <input id="name" type="text" placeholder="Enter your name" required><br>
+                <label>E-mail</label><br>
+                <input id="email" type="email" placeholder="Enter your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
+                <label for="pwd">Password</label><br>
+                <div style="position: relative;">
+                    <input type="password" id="password" name="pwd" placeholder="Enter password" required>
+                    <span id="eye" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;"
+                        onclick="togglePasswordVisibility()">👁️</span>
+                </div>
+                <label>Address</label><br>
+                <input id="address" type="text" placeholder="Enter your address here" required><br>
+                <input type="submit" value="Submit">
+                <h3>Already have an account? <a style="text-decoration:none; color: black;" href="login.html">Sign-in</a></h3>
+            </form>
+        </div>
+    </div> -->
     <div id="container">
         <div id="maindiv">
             <h1>CHECK SHOP BAG<br> BEFORE YOUR BUY</h1>
@@ -145,7 +181,7 @@
             </div>
             
             <p style="color: gray; text-align: center; margin: auto;">When you follow our links to visit a brand or
-                retailer’s website or make a purchase, ModeSens may earn a commission.</p>
+                retailer’s wepgbsite or make a purchase, ModeSens may earn a commission.</p>
 
             <hr>
             <div id="foot2">
@@ -179,3 +215,20 @@
 </body>
 
 </html>
+<script src="./script/signup.js"></script>
+
+<!-- Include your existing HTML code for the index page -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Check if the user has signed up
+        const hasSignedUp = localStorage.getItem('hasSignedUp');
+
+        if (!hasSignedUp) {
+            // If not signed up, show the signup modal
+            const signupModal = document.getElementById('signupModal');
+            signupModal.style.display = 'block';
+        }
+    });
+</script>
+

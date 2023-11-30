@@ -7,7 +7,7 @@ let displaywishcount = document.getElementById("wishcount");
 let productArr = [];
 
 let deployedurl = "https://sore-bear-pocketbook.cyclic.app/products/";
-let localhostUrl = "http://localhost:8080/products/allwomenproducts";
+let localhostUrl = "http://localhost:8080/products/allmenproducts";
 
 async function getdata() {
     try {

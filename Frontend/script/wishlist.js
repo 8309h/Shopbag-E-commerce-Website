@@ -1,10 +1,6 @@
 let container = document.getElementById("card-container");
 
 let displaywishcount = document.getElementById("wishcount");
-
-
-
-
 let  cart  = JSON.parse(localStorage.getItem("shopcartdata")) || [];
 let  wishListData  = JSON.parse(localStorage.getItem("shopwishlist")) || [];
 function displayProducts(data) {

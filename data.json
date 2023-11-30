@@ -1,0 +1,246 @@
+
+
+
+
+
+  // men
+  [
+    {
+      "_id": "63f90bdc7ada983155824f8c",
+      "Title": "Amazon Brand - Symbol",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/819E5suv0pL._AC_UL320_.jpg",
+      "Description": "Men's Regular Fit T-Shirt",
+      "Price": 1499
+    },
+    {
+      "_id": "63f90bf37ada983155824f8e",
+      "Title": "Aventura Outfitters",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/41eDocYv8WL._AC_UL320_.jpg",
+      "Description": "Men's Regular Fit T-Shirt (Pack of 4)",
+      "Price": 2999
+    },
+    {
+      "_id": "63f90c087ada983155824f90",
+      "Title": "Amazon Brand - Symbol",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/71BShor7HeL._AC_UL320_.jpg",
+      "Description": "Men's Regular T-Shirt",
+      "Price": 1395
+    },
+    {
+      "_id": "63f90c1d7ada983155824f92",
+      "Title": "Aventura Outfitters",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/415AoOmIZeL._AC_UL320_.jpg",
+      "Description": "Men's Regular Fit T-Shirt (Pack of 2)",
+      "Price": 1499
+    },
+    {
+      "_id": "63fa385298d23ad245d41096",
+      "Title": "Alan Jones Clothing",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61K9u5gS61L._AC_UL320_.jpg",
+      "Description": "Double Collar Men's Round Neck T-Shirt",
+      "Price": 1899
+    },
+    {
+      "_id": "63fa387798d23ad245d41098",
+      "Title": "LEWEL",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/71R5FDYDMKL._AC_UL320_.jpg",
+      "Description": "Men's Stylish Hooded Graphic Printed T-Shirt (White)",
+      "Price": 1256
+    },
+    {
+      "_id": "63fa388f98d23ad245d4109a",
+      "Title": "JUGULAR",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/41zvKQWEeHL._AC_UL320_.jpg",
+      "Description": "Men's Cotton Printed T-Shirt",
+      "Price": 788
+    },
+    {
+      "_id": "63fa38a298d23ad245d4109c",
+      "Title": "Amazon Brand - Inkast Denim Co.",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/71Zq6TAy7lL._AC_UL320_.jpg",
+      "Description": "Men's Regular T-Shirt (INK-SS22-TSH-16_Radiant YEL,Peace M)",
+      "Price": 678
+    },
+    {
+      "_id": "63fa38b898d23ad245d4109e",
+      "Title": "Veirdo",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/51AZ6dsImML._AC_UL320_.jpg",
+      "Description": "Oversize Loose Fit Round Neck Half Sleeve T-Shirt for Men (Pack of 2)",
+      "Price": 3421
+    },
+    {
+      "_id": "63fa38d298d23ad245d410a0",
+      "Title": "Red Tape",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/713jGMXHdCL._AC_UL320_.jpg",
+      "Description": "Men's Solid Regular Fit Polo",
+      "Price": 1233
+    },
+    {
+      "_id": "63fa38ee98d23ad245d410a2",
+      "Title": "Alan Jones Clothing",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61zT8raEyFL._AC_UL320_.jpg",
+      "Description": "Men's Cotton Sleeveless T-Shirt",
+      "Price": 768
+    },
+    {
+      "_id": "63fa391b98d23ad245d410a4",
+      "Title": "Alan Jones Clothing",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/81LKNMLL8uL._AC_UL320_.jpg",
+      "Description": "Men's Regular Soild Polo T-Shirt",
+      "Price": 234
+    },
+    {
+      "_id": "63fa393198d23ad245d410a6",
+      "Title": "Alan Jones Clothing",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61cW-sGQ5CL._AC_UL320_.jpg",
+      "Description": "Men's Cotton Colorblocked Sleeveless T-Shirt",
+      "Price": 990
+    },
+    {
+      "_id": "63fa394798d23ad245d410a8",
+      "Title": "Redseason",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61Y3mModfKL._AC_UL320_.jpg",
+      "Description": "Men's Regular Fit Full Sleeve Cotton T-Shirt",
+      "Price": 899
+    },
+    {
+      "_id": "63fa3a6a98d23ad245d410bc",
+      "Title": "Scott International",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/711Ku5lk5wL._AC_UL320_.jpg",
+      "Description": "Men's Regular Fit T-Shirt (Pack of 3)",
+      "Price": 2341
+    },
+    {
+      "_id": "63fa3a9598d23ad245d410be",
+      "Title": "Alan Jones Clothing",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61lZbuNBtWL._AC_UL320_.jpg",
+      "Description": "Men's Cotton Colorblocked Sleeveless T-Shirt",
+      "Price": 1234
+    },
+    {
+      "_id": "63fa3aaf98d23ad245d410c0",
+      "Title": "Wrangler",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/611T2FNdHeL._AC_UL320_.jpg",
+      "Description": "Men T-Shirt",
+      "Price": 1588
+    },
+    {
+      "_id": "63fa3e1098d23ad245d410c3",
+      "Title": "Alan Jones Clothing",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61-iSworjoL._AC_UL320_.jpg",
+      "Description": "Men's Cotton Colorblocked Sleeveless T-Shirt",
+      "Price": 890
+    },
+    {
+      "_id": "63fa3e2e98d23ad245d410c5",
+      "Title": "Amazon Brand - Inkast Denim Co.",
+      "Catogory": "men's clothing",
+      "Image": "https://m.media-amazon.com/images/I/81vtpAJ-2QL._AC_UL320_.jpg",
+      "Description": "Men's Regular T-Shirt",
+      "Price": 876
+    }
+  ]
+
+
+  // women
+
+  [
+    {
+      "_id": "63f90afb7ada983155824f88",
+      "Title": "PLAGG",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61L4LBm2jZL._AC_UL320_.jpg",
+      "Description": "Women Cotton Round Neck Full Sleeve Regular Fit Tshirt",
+      "Price": 2199
+    },
+    {
+      "_id": "63fa399298d23ad245d410aa",
+      "Title": "Amazon Brand - Symbol",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/71fRSdThqxL._AC_UL320_.jpg",
+      "Description": "Women T-Shirt",
+      "Price": 576
+    },
+    {
+      "_id": "63fa39aa98d23ad245d410ac",
+      "Title": "The Monkey Castle",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/31M-kCxCteL._AC_UL320_.jpg",
+      "Description": "T-Shirt Black Round Neck Pure Cotton for Women Regular Fit",
+      "Price": 564
+    },
+    {
+      "_id": "63fa39bd98d23ad245d410ae",
+      "Title": "Amazon Brand - Symbol",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/815TSD8oPvL._AC_UL320_.jpg",
+      "Description": "Women's Regular T-Shirt",
+      "Price": 786
+    },
+    {
+      "_id": "63fa39d298d23ad245d410b0",
+      "Title": "Ap'pulse",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61eb5QQFvmL._AC_UL320_.jpg",
+      "Description": "Women's Long Sleeve Thumbopen Hoodie",
+      "Price": 4556
+    },
+    {
+      "_id": "63fa39f098d23ad245d410b2",
+      "Title": "Stories.Label",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61QDgoj4UyL._AC_UL320_.jpg",
+      "Description": "Women Printed Cotton T-Shirt in Regular Fit and Half Sleeves, Casual Tops",
+      "Price": 1245
+    },
+    {
+      "_id": "63fa3a0c98d23ad245d410b4",
+      "Title": "Ap'pulse",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/71IWYzZfUqL._AC_UL320_.jpg",
+      "Description": "Women's T-Shirt (Pack of 2)",
+      "Price": 1057
+    },
+    {
+      "_id": "63fa3a2198d23ad245d410b6",
+      "Title": "PLAGG",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61L4LBm2jZL._AC_UL320_.jpg",
+      "Description": "Women Cotton Round Neck Full Sleeve Regular Fit Tshirt",
+      "Price": 2145
+    },
+    {
+      "_id": "63fa3a3798d23ad245d410b8",
+      "Title": "JUNEBERRY",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/61K1AMOSdFL._AC_UL320_.jpg",
+      "Description": "Cotton Regular Fit Printed Half Sleeves T-Shirt for Women",
+      "Price": 1199
+    },
+    {
+      "_id": "63fa3a4e98d23ad245d410ba",
+      "Title": "JUNEBERRY",
+      "Catogory": "women's clothing",
+      "Image": "https://m.media-amazon.com/images/I/519XEWOmXHL._AC_UL320_.jpg",
+      "Description": "Women's Regular Fit T-Shirt",
+      "Price": 2194
+    }
+  ]

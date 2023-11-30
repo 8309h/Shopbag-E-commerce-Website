@@ -37,14 +37,16 @@ input ,button{
     gap: 0px;
     display: flex;
     margin: auto;
+    margin-top: 5%;
+    box-shadow: rgba(85, 85, 116, 0.2) 0px 7px 29px 0px;
    
     
    
 }
 #black{
     width: 50%;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     
    
 }
@@ -55,6 +57,7 @@ input ,button{
 #hide{
     width: 50px;
     text-align: center;
+    color: black;
     background-color: white;
     border: none;
     margin-left: 80%;
@@ -62,6 +65,7 @@ input ,button{
 }
 #white{
     width: 50%;
+    box-shadow: rgba(85, 85, 116, 0.2) 0px 7px 29px 0px;
   
 }
 
@@ -75,3 +79,4 @@ form {
 form p,h3{
     text-align: left;
 }
+

@@ -17,28 +17,33 @@
             <div id="logo">
                 <img src="./images/logo2.png" alt="">
             </div>
-            <h1>We are your <br>Shoping Assistance</h1>
+            <h1>We are your <br>Shopping Assistance</h1>
             <p>WITH US YOU CAN</p>
             <h3>👜COMPARE WITH 500+ STORE</h3>
             <h3>⏰GET ALERTS ON YOUR ITEMS</h3>
             <h3>🔎SAVE YOUR SEARCHES</h3>
-            <h3>🛒MANAGE YOUR SHOPING LIST</h3>
+            <h3>🛒MANAGE YOUR SHOPPING LIST</h3>
             <h3>🤑EARN POINTS</h3>
         </div>
         <div id="white">
             <button id="hide" style="text-align: end; font-size:25px;">X</button>
-            <form>
+            <form id="signupForm">
                 <h2>REGISTER</h2>
                 <label>Full Name</label><br>
-                <input id="name" type="text" placeholder="Enter your name"><br>
+                <input id="name" type="text" placeholder="Enter your name" required><br>
                 <label>E-mail</label><br>
-                <input id="email" type="email" placeholder="Enter your email"><br>
+                <input id="email" type="email" placeholder="Enter your email" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
                 <label for="pwd">Password</label><br>
-                <input type="password" id="password" name="pwd" placeholder="Enter password">
-                <label>City</label><br>
-                <input id="city" type="text" placeholder="Enter your city name"><br>
-                <input type="submit" value="submit">
-                <!-- <button onclick="onSignup()">REGISTER</button> -->
+                <div style="position: relative;">
+                    <input type="password" id="password" name="pwd" placeholder="Enter password" required>
+                    <span id="eye"
+                        style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;"
+                        onclick="togglePasswordVisibility()">👁️</span>
+                </div>
+                <label>Address</label><br>
+                <input id="address" type="text" placeholder="Enter your address here" required><br>
+                <input type="submit" value="Submit">
                 <h3>Already have an account? <a style="text-decoration:none; color: black;"
                         href="login.html">Sign-in</a></h3>
             </form>
@@ -48,45 +53,4 @@
 </body>
 
 </html>
-<script>
-    document.getElementById("hide").addEventListener("click", function () {
-
-        let cont = document.getElementById("container")
-        cont.style.display = "none";
-
-
-    })
-
-
-
-    let form = document.querySelector('form')
-    form.addEventListener('submit', myfun)
-    function myfun(event) {
-        event.preventDefault()
-        const payload = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            password: document.getElementById("password").value,
-            city: document.getElementById("city").value
-        }
-        console.log(payload)
-
-        fetch("https://sore-bear-pocketbook.cyclic.app/users/register", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: JSON.stringify(payload)
-        }).then((res) => { return res.json() })
-            .then((data) => {
-                console.log(data)
-                location.href="login.html"
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-
-
-    }
-
-</script>
+<script src="./script/signup.js"></script>

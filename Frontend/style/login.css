@@ -36,14 +36,15 @@ input ,button{
     gap: 0px;
     display: flex;
     margin: auto;
+    box-shadow: rgba(85, 85, 116, 0.2) 0px 7px 29px 0px;
    
     
    
 }
 #black{
     width: 50%;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     
    
 }
@@ -61,6 +62,7 @@ input ,button{
 }
 #white{
     width: 50%;
+    box-shadow: rgba(85, 85, 116, 0.2) 0px 7px 29px 0px;
   
 }
 
