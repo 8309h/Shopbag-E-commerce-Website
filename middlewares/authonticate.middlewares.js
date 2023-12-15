@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken")
 
 const authonticate = (req,res,next) => {
+
     const token = req.headers.authorization
     if(token){
         
@@ -9,7 +10,7 @@ const authonticate = (req,res,next) => {
                 req.body.userID = decoded.userID
                 next()
             }else{
-                 res.send({"msg":"pLease Login"})
+                 res.send({"msg":"Please Login"})
             }
         });
     } else {

@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get("/", (req, res) => {
-    res.send("Home-Page of EasyShop")
+    res.send("Home-Page of EasyShop_the shopping hub")
 
 })
 
@@ -27,9 +27,9 @@ app.get("/alluserdata", (req, res) => {
   
 });
 app.use("/users", userRouter)
-
 app.use("/products", productRouter)
 app.use(authonticate)
+
 
 
 

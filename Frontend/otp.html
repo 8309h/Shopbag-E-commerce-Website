@@ -7,24 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OTP</title>
   <link rel="stylesheet" href="./style/otp.css">
-
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
   <div id="otpDiv">
 
 
-    <div id="inputDiv">
-      <input id="otp1" type="tel" maxlength="1">
-      <input id="otp2" type="tel" maxlength="1">
-      <input id="otp3" type="tel" maxlength="1">
-      <input id="otp4" type="tel" maxlength="1">
-
-    </div>
-    <div id="butt">
-      <button id="checkotp" onclick="otpfun()"> CONFIRM <a href="./index.html"></a></button></a>
-      <button id="resendotp"> RESEND <a href="./index.html"></a></button></a>
-    </div>
+    <form id="inputDiv">
+      <!-- <label for="otp1">OTP:</label -->
+      <input type="text" id="otp1" maxlength="1" class="otp-input" />
+      <input type="text" id="otp2" maxlength="1" class="otp-input" />
+      <input type="text" id="otp3" maxlength="1" class="otp-input" />
+      <input type="text" id="otp4" maxlength="1" class="otp-input" /> <br>
+     
+         <button type="button" onclick="validateOTP()">Submit OTP</button>
+        <button id="resendotp">Resend OTP</button>
+     
+  </form>
   </div>
 
   <div id="recipte2">

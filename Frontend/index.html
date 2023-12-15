@@ -5,23 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style/index.css">
+
 
 </head>
 
 <body>
-   
+
+
     <nav>
 
         <div id="black">Download our shop bags mobile app and your membership will extends by three month</div>
         <div id="nav1">
             <div id="logo">
                 <a href="./index.html"><img src="./images/logo2.png" alt=""></a>
-                
+
             </div>
-             <div id="links">
+            <div id="links">
                 <a href="./product.html"><button>WOMEN</button></a>
                 <a href="./mensproduct.html"><button>MEN</button></a>
                 <a href="./aboutus.html"><button>ABOUT</button></a>
@@ -32,21 +36,31 @@
                 <a href="#"><button>SALE</button></a>
                 <a href="./admin.html"><button style="color: white; background-color: black;">ADMIN</button></a>
             </div>
-            
+
             <div id="links2">
-               
-                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa fa-user" aria-hidden="true"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="login()">Login</a>
+                        <a href="#" onclick="signUp()">Sign Up</a>
+                        <a href="#" onclick="logout()">Logout</a>
+                        <a href="#" onclick="goToProfile()">Go to Profile</a>
+                    </div>
+                </div>
                 <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span>
-                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span id="cartcount"></span>
-                <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> </a>
+                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span
+                    id="cartcount"></span>
+
+
 
 
             </div>
         </div>
-    </nav>  
-    <!-- <div id="signupModal" style="display: block; background-color: aqua;" >
-        
+    </nav>
+    <div id="signupModal">
 
+        <!-- style="display: block; background-color: aqua;" -->
         <div id="black">
             <div id="logo">
                 <img src="./images/logo2.png" alt="">
@@ -60,28 +74,33 @@
             <h3>🤑EARN POINTS</h3>
         </div>
         <div id="white">
-            <button id="hide" style="text-align: end; font-size:25px;">X</button>
-            <form id="signupForm">
+            <button id="hide" style="text-align: end; font-size:25px;" onclick="hideSignUpModal()">X</button>
+            <form id="signupForm" onsubmit="handleSignUpFormSubmission()">
                 <h2>REGISTER</h2>
                 <label>Full Name</label><br>
                 <input id="name" type="text" placeholder="Enter your name" required><br>
                 <label>E-mail</label><br>
-                <input id="email" type="email" placeholder="Enter your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
+                <input id="email" type="email" placeholder="Enter your email" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
                 <label for="pwd">Password</label><br>
                 <div style="position: relative;">
                     <input type="password" id="password" name="pwd" placeholder="Enter password" required>
-                    <span id="eye" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;"
+                    <span id="eye"
+                        style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;"
                         onclick="togglePasswordVisibility()">👁️</span>
                 </div>
                 <label>Address</label><br>
                 <input id="address" type="text" placeholder="Enter your address here" required><br>
                 <input type="submit" value="Submit">
-                <h3>Already have an account? <a style="text-decoration:none; color: black;" href="login.html">Sign-in</a></h3>
+                <h3>Already have an account? <a style="text-decoration:none; color: black;"
+                        href="login.html">Sign-in</a></h3>
             </form>
         </div>
-    </div> -->
+    </div>
+    <br>
+
     <div id="container">
-        <div id="maindiv">
+        <div id="maindiv" style="text-align: left;">
             <h1>CHECK SHOP BAG<br> BEFORE YOUR BUY</h1>
             <p>We Are not a store we are your shoping assistant</p>
             <a href="./login.html"><button>JOIN NOW FOR FREE</button></a>
@@ -113,7 +132,9 @@
                 </div>
                 <p>Automatically compare products across 500+ stores while you browse at any of our partner stores’
                     websites.</p>
-               <a href="login.html"><button style="background-color: white; border: 1px solid red; padding: 7px 50px;">Install Now</button></a> 
+                <a href="login.html"><button
+                        style="background-color: white; border: 1px solid red; padding: 7px 50px;">Install
+                        Now</button></a>
             </div>
             <div id="slideshow">
                 <img src="https://cdn.modesens.com/static/img/20221231bg3_en.png" alt="">
@@ -127,22 +148,22 @@
                 <h1>Download The shopBag App</h1>
                 <p>Scan any bar code or tag on a product to compare across 500+ stores before you buy.</p>
                 <div id="playstore">
-                   
+
                     <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="">
                     <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="">
-                    
+
                 </div>
             </div>
         </div>
         <h1 id="harshal" style="margin: 100px; text-align: center;">SHOP YOUR FAVORITE CATEGORY</h1>
-        <img  id="girl" src="./images/Screenshot (35).png" alt="">
+        <img id="girl" src="./images/Screenshot (35).png" alt="">
         <img src="./images/Screenshot (38).png" alt="">
         <div id="last">
             <p>Join Today to Unleash the Full Power of ModeSens</p>
             <a href="./login.html"><button>JOIN NOW FOR FREE</button></a>
         </div>
         <hr>
-        
+
         <footer>
             <div id="foot1">
                 <div>
@@ -179,16 +200,16 @@
 
                 </div>
             </div>
-            
+
             <p style="color: gray; text-align: center; margin: auto;">When you follow our links to visit a brand or
                 retailer’s wepgbsite or make a purchase, ModeSens may earn a commission.</p>
 
             <hr>
             <div id="foot2">
                 <div id="footicon">
-                 
-                        <img  style="width: 50%;" src="./images/logo2.png" alt="">
-                   
+
+                    <img style="width: 50%;" src="./images/logo2.png" alt="">
+
                     <p>© 2022 shopBag Inc</p>
                 </div>
                 <div id="lastlink">
@@ -200,22 +221,22 @@
                     <i class="fa fa-yahoo" aria-hidden="true"></i>
                     <i class="fa fa-google" aria-hidden="true"></i>
                     <i class="fa fa-snapchat" aria-hidden="true"></i>
-                    
+
                 </div>
             </div>
-           
-           
+
+
 
 
         </footer>
-         <!-- coment -->
+        <!-- coment -->
 
 
     </div>
 </body>
 
 </html>
-<script src="./script/signup.js"></script>
+<!-- <script src="./script/signup.js"></script> -->
 
 <!-- Include your existing HTML code for the index page -->
 
@@ -231,4 +252,57 @@
         }
     });
 </script>
+<script>
+    function login() {
+        alert("Login clicked");
+        window.location.href = "login.html"
 
+    }
+
+    function signUp() {
+        alert("Sign Up clicked");
+        window.location.href = "signup.html"
+    }
+
+    function logout() {
+        alert("Logout clicked");
+
+    }
+
+    function goToProfile() {
+        alert("Go to Profile clicked");
+        // Add your go to profile logic here
+    }
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Check if the user has signed up
+        const hasSignedUp = localStorage.getItem('hasSignedUp');
+
+        if (hasSignedUp === 'true') {
+            // User has signed up, hide the signup modal
+            document.getElementById("signupModal").style.display = "none";
+            document.querySelector("#container").style.display = "block";
+        } else {
+            // User has not signed up, show the signup modal
+            document.getElementById("signupModal").style.display = "flex";
+            alert("Login First")
+            document.querySelector("#container").style.display = "none";
+           
+        }
+    });
+
+    // Function to handle the form submission
+    function handleSignUpFormSubmission() {
+        // Perform form submission logic
+
+        // After successful registration, set the localStorage key
+        localStorage.setItem('hasSignedUp', true);
+    }
+
+    function hideSignUpModal() {
+        document.getElementById("signupModal").style.display = "none";
+    }
+</script>

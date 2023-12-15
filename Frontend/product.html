@@ -33,11 +33,21 @@
             </div> 
             
             <div id="links2">
-                
-                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa fa-user" aria-hidden="true"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="login()">Login</a>
+                        <a href="#" onclick="signUp()">Sign Up</a>
+                        <a href="#" onclick="logout()">Logout</a>
+                        <a href="#" onclick="goToProfile()">Go to Profile</a>
+                    </div>
+                </div>
                 <a href="wishlist.html"><i class="fa fa-heart" aria-hidden="true"></i> </a><span id="wishcount"></span>
-                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span id="cartcount"></span>
-                <a href="login.html"><i class="fa fa-user" aria-hidden="true"></i> </a>
+                <a href="cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a><span
+                    id="cartcount"></span>
+
+
 
 
             </div>

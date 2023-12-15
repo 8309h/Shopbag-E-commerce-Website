@@ -78,3 +78,8 @@
   #recipte2 p{
     text-align: start;
   }
+  #inputDiv button {
+    padding: 10px;
+    margin-top: 10px;
+    
+  }

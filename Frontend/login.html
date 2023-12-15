@@ -63,7 +63,8 @@
 
 </html>
 <script>
-    document.getElementById("hide").addEventListener("click", function () {
+
+    document.getElementById("hide").addEventListener("click",function() {
         let cont = document.getElementById("container");
         cont.style.display = "none";
     });
@@ -73,6 +74,7 @@
 
     function myfun(event) {
         event.preventDefault();
+
         if (validateForm()) {
             const payload = {
                 email: document.getElementById("email").value,
@@ -90,9 +92,17 @@
             })
                 .then((res) => res.json())
                 .then((res) => {
-                    console.log(res);
-                    localStorage.setItem("token", res.token);
-                    location.href = "index.html";
+                    // console.log("res",res.msg);
+
+                    if(res.msg == "Login sucess") {
+                        localStorage.setItem("token", res.token);
+                        alert("Login Sucessful")
+                        location.href = "index.html";
+
+                    }else {
+                        alert(res.msg)
+                    }
+                    
                 })
                 .catch((err) => {
                     console.log(err);

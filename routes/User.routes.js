@@ -5,8 +5,6 @@ const bcrypt = require("bcrypt")
 
 const userRouter = express.Router();
 
-
-  
   userRouter.post("/register", async (req, res) => {
     const { name, email,password,address} = req.body
     const findemail = await UserModel.find({"email":email})
@@ -22,7 +20,7 @@ const userRouter = express.Router();
             } else {
                 const user = new UserModel({ name, email, password: hash,address})
                 await user.save();
-                res.send({ "msg": " New User register" })
+                res.send({ "msg": "New User register" })
 
             }
             // Store hash in your password Data Base.
@@ -38,7 +36,7 @@ const userRouter = express.Router();
 userRouter.post("/login", async (req, res) => {
     const { email,password } = (req.body)
     try {
-        const user = await UserModel.find({ email })
+        const user = await UserModel.find({email})
         console.log(user)
         if (user.length > 0) {
             bcrypt.compare(password, user[0].password, (err, result) => {
@@ -48,13 +46,13 @@ userRouter.post("/login", async (req, res) => {
                     res.send({ "msg": "Login sucess", "token": token })
 
                 } else {
-                    res.send({"msg":"Wrong Credentilas"})
+                    res.send({"msg":"Incorrect password"})
                 }
             
             });
 
         } else {
-            res.send({"msg":"Credentilas not found"})
+            res.send({"msg":" Email not found"})
         }
     }
     catch (err) {
@@ -125,16 +123,12 @@ userRouter.put("/updateprofile", async (req, res) => {
   
       // Blacklist the token
       await new BlacklistTokenModel({ token }).save();
-  
       res.send({ "msg": "Logout successful" });
     } catch (err) {
       console.error(err);
       res.status(500).send({ "msg": "Something went wrong" });
     }
   });
-  
-
-  
 
 module.exports = {
     userRouter

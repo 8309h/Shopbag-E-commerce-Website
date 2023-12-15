@@ -77,7 +77,7 @@ function addToCart(product) {
         cart.push({ ...product, quantity: 1 });
         localStorage.setItem("shopcartdata", JSON.stringify(cart));
         alert("Product Added To Cart ✔");
-        location.href = "cart.html";
+        // location.href = "cart.html";
     } else {
         alert("Product Already in Cart ❌");
     }

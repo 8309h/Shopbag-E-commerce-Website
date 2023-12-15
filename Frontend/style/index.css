@@ -16,7 +16,7 @@ nav{
     z-index: 1;
 }
 
-#black{
+nav #black{
     background-color: black;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -75,21 +75,27 @@ img{
     font-size: 24px;
     color: white;
     position: absolute;
-    top: 5%;
+    top: 16%;
     left: 5%;
     font-weight: bold;
     z-index: 1.0;
+   
 
     
 }
 #maindiv button{
     background-color: red;
-    /* padding: 10px 20px 10px 20px; */
+    padding: 10px 20px 10px 20px;
     padding: 10px 60px ;
     color: white;
     border: none;
+    width: 60%;
 
 }
+#maindiv p {
+    margin-left: 70px;
+}
+
 #slideshow {
     width: 60%;
     margin: auto;
@@ -189,6 +195,135 @@ img{
     color: black;
     /* background-color: black; */
 }
+
+
+/* Style the dropdown button */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: var(--webfont-primary,sans-serif);
+  }
+
+  .dropbtn {
+    background-color: white;
+    color: black;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Style the dropdown links */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* Change color on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  #signupModal {
+    display: block;
+    width: 70%;
+    height: 100%;
+    gap: 0px;
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+    box-shadow: rgba(85, 85, 116, 0.2) 0px 7px 29px 0px;
+   
+    
+  }
+  #signupModal #black {
+    width: 50%;
+    background-color:white;
+    color: black;
+
+  }
+  #signupModal #white {
+    width: 45%;
+    background-color: white;
+    color: black;
+  }
+  #signupModal form {
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+  }
+   #signupModal input , #signupModal button{
+    width: 100%;
+    padding: 12px 10px;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+   
+}
+#signupModal #logo{
+    width: 70%;
+     margin: auto;
+   
+    
+}
+#signupModal #logo img{
+    width: 100%;
+   
+}
+
+
+#signupModal #black h1,#black p,#black h3{
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+#white #hide{
+    width: 50px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border: none;
+    margin-left: 80%;
+   
+}
+#signupModal #white{
+    width: 50%;
+    box-shadow: rgba(85, 85, 116, 0.2) 0px 7px 29px 0px;
+  
+}
+
+#white form {
+    width:80%;
+    margin: auto;
+    font-size: bolder;
+    margin-top: 10%;
+   
+}
+#signupModal #white p, #signupModal #white h3{
+    text-align: left;
+}
+
 @media (min-width: 100px) and (max-width: 700px){
     
     #nav1{
@@ -223,7 +358,7 @@ img{
         font-size: 30%;
         color: white;
         position: absolute;
-        top: 10%;
+        top: 5%;
         left: 5%;
         font-weight: bold;
         z-index: 1.0;
